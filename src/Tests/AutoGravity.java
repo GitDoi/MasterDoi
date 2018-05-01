@@ -7,6 +7,6 @@ public class AutoGravity extends BaseTest
   @Test
   public void reachCardApplication() 
   {
-	  
+	 
   }
 }
