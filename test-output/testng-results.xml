@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="13117" started-at="2018-05-01T17:59:34Z" finished-at="2018-05-01T17:59:47Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="13117" started-at="2018-05-01T17:59:34Z" finished-at="2018-05-01T17:59:47Z">
+      <class name="Tests.AutoGravity">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Tests.AutoGravity@27a8c74e]" name="setUp" is-config="true" duration-ms="11561" started-at="2018-05-01T17:59:34Z" finished-at="2018-05-01T17:59:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="reachCardApplication()[pri:0, instance:Tests.AutoGravity@27a8c74e]" name="reachCardApplication" duration-ms="4" started-at="2018-05-01T17:59:46Z" finished-at="2018-05-01T17:59:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reachCardApplication -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:Tests.AutoGravity@27a8c74e]" name="cleanUp" is-config="true" duration-ms="1535" started-at="2018-05-01T17:59:46Z" finished-at="2018-05-01T17:59:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+      </class> <!-- Tests.AutoGravity -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
