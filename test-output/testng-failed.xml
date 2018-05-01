@@ -7,7 +7,7 @@
         <methods>
           <include name="setUp"/>
           <include name="cleanUp"/>
-          <include name="reachCardApplication"/>
+          <include name="reachCreditCardApplication"/>
         </methods>
       </class> <!-- Tests.AutoGravity -->
     </classes>
