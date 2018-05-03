@@ -15,6 +15,6 @@ public class ReviewLoanPage
 	}
 	
 	//Next button
-	@FindBy(how = How.CSS, using = "div.bottomSection___2lQYz > div > div:nth-child(3) > button")
+	@FindBy(how = How.CSS, using = "button.newButton___3mgiP.btn.btn-primary")
 	public WebElement nextButton;
 }

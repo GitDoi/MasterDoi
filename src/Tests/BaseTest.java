@@ -4,6 +4,7 @@ import java.util.Random;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -35,5 +36,19 @@ public class BaseTest
 		r.setSeed(System.currentTimeMillis());
 		return r.nextInt((max - min) + 1) + min;
 	}
+	
+	public boolean isElementPresent(WebDriver driver, WebElement element, int seconds)
+    {
+		WebDriverWait wait = new WebDriverWait(driver, seconds);
+        try
+        {
+            wait.until(ExpectedConditions.elementToBeClickable(element));
+            return true;
+        }
+        catch (Exception e)
+        {
+            return false;
+        }
+    }
 }
 

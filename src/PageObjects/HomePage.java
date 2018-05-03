@@ -41,6 +41,6 @@ public class HomePage
 	
 	//List of car models
 	@FindBy(how = How.CSS, using = "div.bodyTypeRow___HXQre > div > div > div > div")
-	public List<WebElement> ModelList;
+	public List<WebElement> modelList;
 
 }

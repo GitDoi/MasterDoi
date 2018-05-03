@@ -14,6 +14,6 @@ public class ReviewCarPage
 	}
 		
 	//Next button
-	@FindBy(how = How.CSS, using = "div.buttonNextContainer___1EySu > button")
+	@FindBy(how = How.CSS, using = "button.btn.btn-primary.buttonNext___2w_Xa")
 	public WebElement nextButton;
 }

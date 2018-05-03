@@ -9,7 +9,7 @@ import PageObjects.HomePage;
 import PageObjects.ReviewCarPage;
 import PageObjects.ReviewLoanPage;
 
-public class AutoGravity extends BaseTest
+public class AutoGravityTest extends BaseTest
 {
   @Test
   public void reachCreditCardApplication() throws InterruptedException 
@@ -30,40 +30,70 @@ public class AutoGravity extends BaseTest
 	  wait.until(ExpectedConditions.visibilityOf(homePage.locationPopUp));
 	  homePage.zipTextBox.sendKeys(zip);
 	  homePage.findButton.click();
+	  Thread.sleep(3000);
 	  
 	  //Randomly select a make
-	  Thread.sleep(3000);
 	  index = generateRandomInteger(0, homePage.MakeList.size() - 1);
 	  homePage.MakeList.get(index).click();
+	  Thread.sleep(3000);
 	  
 	  //Randomly select a model
+	  index = generateRandomInteger(0, homePage.modelList.size() - 1);
+	  homePage.modelList.get(index).click();
 	  Thread.sleep(3000);
-	  index = generateRandomInteger(0, homePage.ModelList.size() - 1);
-	  homePage.ModelList.get(index).click();
 	  
-	  //Randomly select a body type
-	  Thread.sleep(3000);
-	  index = generateRandomInteger(0, bodyPage.bodyList.size() - 1);
-	  bodyPage.bodyList.get(index).click();
+	  //If necessary, select random year
+	  if(isElementPresent(driver, bodyPage.yearTab, 1))
+	  {
+		  index = generateRandomInteger(0, bodyPage.yearList.size() - 1);
+		  bodyPage.yearList.get(index).click();
+		  Thread.sleep(3000);
+	  }
 	  
-	  //Proceed next at car review page
-	  Thread.sleep(1000);
-	  reviewCarPage.nextButton.click();
+	  //If necessary, select random trim.
+	  if(isElementPresent(driver, bodyPage.trimSection, 1))
+	  {
+		  index = generateRandomInteger(0, bodyPage.trimList.size() - 1);
+		  bodyPage.trimList.get(index).click();
+		  Thread.sleep(3000);
+	  }
+	   
+	  //If necessary, select a random body type from filter page
+	  if (isElementPresent(driver, bodyPage.bodyTypeSection, 1))
+	  {
+		  index = generateRandomInteger(0, bodyPage.bodyList.size() - 1);
+		  bodyPage.bodyList.get(index).click();
+		  Thread.sleep(1000);
+	  }
+	  
+	  //If reached, proceed next at car review page
+	  if (isElementPresent(driver, reviewCarPage.nextButton, 1))
+	  {
+		  reviewCarPage.nextButton.click();
+		  Thread.sleep(1000);
+	  }
 	  
 	  //Proceed next at loan review page
-	  Thread.sleep(1000);
 	  reviewLoanPage.nextButton.click();
+	  Thread.sleep(1000);
 	  
-	  //Reach card application page and verify.  
-	  Thread.sleep(3000);
+	  /*//If necessary, select dealer.
+	  if()
+	  {
+		  index = generateRandomInteger(0, bodyPage.bodyList.size() - 1);
+		  Thread.sleep(3000);
+	  }*/
+	  
+	  //Reach card application page and verify.    
 	  if (!driver.getPageSource().contains("Personal Information"))
 	  {
 		  driver.navigate().refresh();
 		  Assert.fail("Target page was not reached.");
 	  }
 	  
-	  //Needed to eliminate leave/stay alert after webdriver closes window so test can finish.
+	  //Trigger alert and stay on page. 
 	  driver.navigate().refresh();
+	  driver.switchTo().alert().accept();
   }
 }
 
