@@ -2,7 +2,6 @@ package Tests;
 
 import org.testng.annotations.Test;
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import PageObjects.BodyPage;
@@ -17,7 +16,6 @@ public class AutoGravity extends BaseTest
   {
 	  String zip = "92843";
 	  int index;
-	  Alert a;
 
 	  //Initialize page objects used
 	  HomePage homePage = PageFactory.initElements(driver, HomePage.class);
