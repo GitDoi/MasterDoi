@@ -36,3 +36,4 @@ public class BaseTest
 		return r.nextInt((max - min) + 1) + min;
 	}
 }
+
