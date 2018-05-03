@@ -1,5 +1,6 @@
 package Tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -53,8 +54,13 @@ public class AutoGravity extends BaseTest
 	  Thread.sleep(1000);
 	  reviewLoanPage.nextButton.click();
 	  
-	  //Reach card application page and wait 5 seconds.  
-	  Thread.sleep(5000);
+	  //Reach card application page and verify.  
+	  Thread.sleep(3000);
+	  if (!driver.getPageSource().contains("Personal Information"))
+	  {
+		  driver.navigate().refresh();
+		  Assert.fail("Target page was not reached.");
+	  }
 	  
 	  //Needed to eliminate leave/stay alert after webdriver closes window so test can finish.
 	  driver.navigate().refresh();
