@@ -1,7 +1,6 @@
 package Tests;
 
 import org.testng.annotations.Test;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import PageObjects.BodyPage;
