@@ -1,65 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11747" started-at="2018-05-01T22:46:38Z" finished-at="2018-05-01T22:46:50Z">
+  <suite name="Default suite" duration-ms="29276" started-at="2018-05-03T03:37:27Z" finished-at="2018-05-03T03:37:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="11747" started-at="2018-05-01T22:46:38Z" finished-at="2018-05-01T22:46:50Z">
+    <test name="Default test" duration-ms="29276" started-at="2018-05-03T03:37:27Z" finished-at="2018-05-03T03:37:56Z">
       <class name="Tests.AutoGravity">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Tests.AutoGravity@65fb9ffc]" name="setUp" is-config="true" duration-ms="9759" started-at="2018-05-01T22:46:38Z" finished-at="2018-05-01T22:46:48Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Tests.AutoGravity@27a8c74e]" name="setUp" is-config="true" duration-ms="9142" started-at="2018-05-03T03:37:27Z" finished-at="2018-05-03T03:37:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="reachCreditCardApplication()[pri:0, instance:Tests.AutoGravity@65fb9ffc]" name="reachCreditCardApplication" duration-ms="57" started-at="2018-05-01T22:46:48Z" finished-at="2018-05-01T22:46:48Z">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[Can not set java.util.Vector field PageObjects.HomePage.newCarMakeList to com.sun.proxy.$Proxy10]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Can not set java.util.Vector field PageObjects.HomePage.newCarMakeList to com.sun.proxy.$Proxy10
-at sun.reflect.UnsafeFieldAccessorImpl.throwSetIllegalArgumentException(Unknown Source)
-at sun.reflect.UnsafeFieldAccessorImpl.throwSetIllegalArgumentException(Unknown Source)
-at sun.reflect.UnsafeObjectFieldAccessorImpl.set(Unknown Source)
-at java.lang.reflect.Field.set(Unknown Source)
-at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:117)
-at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
-at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:92)
-at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:79)
-at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:65)
-at Tests.AutoGravity.reachCreditCardApplication(AutoGravity.java:22)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+        <test-method status="PASS" signature="reachCreditCardApplication()[pri:0, instance:Tests.AutoGravity@27a8c74e]" name="reachCreditCardApplication" duration-ms="18316" started-at="2018-05-03T03:37:36Z" finished-at="2018-05-03T03:37:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reachCreditCardApplication -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:Tests.AutoGravity@65fb9ffc]" name="cleanUp" is-config="true" duration-ms="1906" started-at="2018-05-01T22:46:48Z" finished-at="2018-05-01T22:46:50Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:Tests.AutoGravity@27a8c74e]" name="cleanUp" is-config="true" duration-ms="1804" started-at="2018-05-03T03:37:54Z" finished-at="2018-05-03T03:37:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
