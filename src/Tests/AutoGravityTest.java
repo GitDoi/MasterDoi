@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import PageObjects.BodyPage;
+import PageObjects.DealerPage;
 import PageObjects.HomePage;
 import PageObjects.ReviewCarPage;
 import PageObjects.ReviewLoanPage;
@@ -14,7 +15,7 @@ public class AutoGravityTest extends BaseTest
   @Test
   public void reachCreditCardApplication() throws InterruptedException 
   {
-	  String zip = "92843";
+	  String zip = "90011";
 	  int index;
 
 	  //Initialize page objects used
@@ -22,6 +23,7 @@ public class AutoGravityTest extends BaseTest
 	  BodyPage bodyPage = PageFactory.initElements(driver, BodyPage.class);
 	  ReviewCarPage reviewCarPage = PageFactory.initElements(driver, ReviewCarPage.class);
 	  ReviewLoanPage reviewLoanPage = PageFactory.initElements(driver, ReviewLoanPage.class);
+	  DealerPage dealerPage = PageFactory.initElements(driver, DealerPage.class);
 	  
 	  //Select to shop new car
 	  homePage.shopNewButton.click();
@@ -55,7 +57,7 @@ public class AutoGravityTest extends BaseTest
 	  {
 		  index = generateRandomInteger(0, bodyPage.trimList.size() - 1);
 		  bodyPage.trimList.get(index).click();
-		  Thread.sleep(3000);
+		  Thread.sleep(2000);
 	  }
 	   
 	  //If necessary, select a random body type from filter page
@@ -63,37 +65,42 @@ public class AutoGravityTest extends BaseTest
 	  {
 		  index = generateRandomInteger(0, bodyPage.bodyList.size() - 1);
 		  bodyPage.bodyList.get(index).click();
-		  Thread.sleep(1000);
+		  Thread.sleep(2000);
 	  }
 	  
 	  //If reached, proceed next at car review page
 	  if (isElementPresent(driver, reviewCarPage.nextButton, 1))
 	  {
 		  reviewCarPage.nextButton.click();
-		  Thread.sleep(1000);
+		  Thread.sleep(2000);
 	  }
 	  
 	  //Proceed next at loan review page
 	  reviewLoanPage.nextButton.click();
-	  Thread.sleep(1000);
+	  Thread.sleep(3000);
 	  
-	  /*//If necessary, select dealer.
-	  if()
+	  //If necessary, select random dealer.
+	  if(driver.getCurrentUrl().contains("dealership"))
 	  {
-		  index = generateRandomInteger(0, bodyPage.bodyList.size() - 1);
+		  index = generateRandomInteger(0, dealerPage.dealerList.size() - 1);
+		  dealerPage.dealerList.get(index).click();
 		  Thread.sleep(3000);
-	  }*/
+		  
+		  dealerPage.dealerButtonList.get(index).click();
+		  Thread.sleep(3000);
+	  }
 	  
 	  //Reach card application page and verify.    
 	  if (!driver.getPageSource().contains("Personal Information"))
 	  {
-		  driver.navigate().refresh();
+		  driver.navigate().back();
+		  Thread.sleep(2000);
 		  Assert.fail("Target page was not reached.");
 	  }
 	  
-	  //Trigger alert and stay on page. 
-	  driver.navigate().refresh();
-	  driver.switchTo().alert().accept();
+	  //Navigate back so webdriver can close. 
+	  driver.navigate().back();
+	  Thread.sleep(2000);
   }
 }
 

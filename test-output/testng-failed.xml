@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Tests.AutoGravity">
+      <class name="Tests.AutoGravityTest">
         <methods>
           <include name="setUp"/>
-          <include name="cleanUp"/>
           <include name="reachCreditCardApplication"/>
+          <include name="cleanUp"/>
         </methods>
-      </class> <!-- Tests.AutoGravity -->
+      </class> <!-- Tests.AutoGravityTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

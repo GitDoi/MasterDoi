@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="93100" started-at="2018-05-03T20:31:27Z" finished-at="2018-05-03T20:33:00Z">
+  <suite name="Default suite" duration-ms="37394" started-at="2018-05-04T01:07:30Z" finished-at="2018-05-04T01:08:08Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="93100" started-at="2018-05-03T20:31:27Z" finished-at="2018-05-03T20:33:00Z">
-      <class name="Tests.AutoGravity">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Tests.AutoGravity@41d477ed]" name="setUp" is-config="true" duration-ms="9480" started-at="2018-05-03T20:31:27Z" finished-at="2018-05-03T20:31:36Z">
+    <test name="Default test" duration-ms="37394" started-at="2018-05-04T01:07:30Z" finished-at="2018-05-04T01:08:08Z">
+      <class name="Tests.AutoGravityTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Tests.AutoGravityTest@59e5ddf]" name="setUp" is-config="true" duration-ms="12982" started-at="2018-05-04T01:07:30Z" finished-at="2018-05-04T01:07:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="reachCreditCardApplication()[pri:0, instance:Tests.AutoGravity@41d477ed]" name="reachCreditCardApplication" duration-ms="82057" started-at="2018-05-03T20:31:36Z" finished-at="2018-05-03T20:32:58Z">
+        <test-method status="PASS" signature="reachCreditCardApplication()[pri:0, instance:Tests.AutoGravityTest@59e5ddf]" name="reachCreditCardApplication" duration-ms="22917" started-at="2018-05-04T01:07:43Z" finished-at="2018-05-04T01:08:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reachCreditCardApplication -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:Tests.AutoGravity@41d477ed]" name="cleanUp" is-config="true" duration-ms="1555" started-at="2018-05-03T20:32:58Z" finished-at="2018-05-03T20:33:00Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:Tests.AutoGravityTest@59e5ddf]" name="cleanUp" is-config="true" duration-ms="1481" started-at="2018-05-04T01:08:06Z" finished-at="2018-05-04T01:08:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-      </class> <!-- Tests.AutoGravity -->
+      </class> <!-- Tests.AutoGravityTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

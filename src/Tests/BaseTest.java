@@ -4,6 +4,7 @@ import java.util.Random;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
@@ -18,7 +19,11 @@ public class BaseTest
 	@BeforeClass
 	public void setUp()
 	{
-		driver = new FirefoxDriver();
+		//Disable geolocation for firefox
+		FirefoxOptions options = new FirefoxOptions();
+		options.addPreference("geo.enabled", false);
+		
+		driver = new FirefoxDriver(options);
 		driver.manage().window().maximize();
 		driver.get(baseURL);
 		wait = new WebDriverWait(driver, 5);
@@ -30,6 +35,7 @@ public class BaseTest
 		driver.quit();
 	}
 	
+	//Generates random int between specified range
 	public int generateRandomInteger(int min, int max)
 	{
 		Random r = new Random();
@@ -37,6 +43,7 @@ public class BaseTest
 		return r.nextInt((max - min) + 1) + min;
 	}
 	
+	//Checks for the prescence of a web element
 	public boolean isElementPresent(WebDriver driver, WebElement element, int seconds)
     {
 		WebDriverWait wait = new WebDriverWait(driver, seconds);
